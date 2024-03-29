@@ -88,7 +88,7 @@ const Login = () => {
                                 width:"10rem",
                                 height:"10rem",
                                 objectFit:"contain",
-                            }}
+                            }}  
 
                             src={avatar.preview}
                             />
