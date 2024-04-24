@@ -11,21 +11,20 @@ const Notfound=lazy(() => import("./pages/Notfound"))
 let user=true;
 const App = () => {
   return (
-   <BrowserRouter>
-  <Suspense fallback={<Loaders/>}>
-  <Routes>
-    <Route  element={<ProtectRoute user={user}/>} />
-    <Route path='/' element={<Home/>}/>
-    <Route path='/groups' element={<Groups/>}/>
-    <Route path='/chat/:chatId' element={<Chat/>}/>
-    
-   
-    <Route/>
-    <Route path='/login' element={<ProtectRoute user={!user} redirect='/'><Login/></ProtectRoute>} />
-    <Route path='*' element={<Notfound/>}/>
-   </Routes>
-  </Suspense>
-   </BrowserRouter>
+    <BrowserRouter>
+    <Suspense fallback={<Loaders/>}>
+      <Routes>
+        <Route element={<ProtectRoute user={user}/>}/>
+          <Route index element={<Home/>}/>
+          <Route path='/groups' element={<Groups/>}/>
+          <Route path='/chat/:chatId' element={<Chat/>}/>
+        <Route/>
+      
+        <Route path='/login' element={<ProtectRoute user={!user} redirect='/'><Login/></ProtectRoute>} />
+        <Route path='*' element={<Notfound/>}/>
+      </Routes>
+    </Suspense>
+  </BrowserRouter>  
   )
 }
 
