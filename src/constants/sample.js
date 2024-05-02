@@ -26,3 +26,18 @@ export const sampleUsers=[{
     
 },
 ];
+export const sampleNotification=[{
+    sender:{
+        avatar:["https://www.w3school.com/howto/img_avatar.png"],
+    name:"jatin gupta",
+    },
+    _id:"1",
+    
+},
+{
+    sender:{
+        avatar:["https://www.w3school.com/howto/img_avatar.png"],
+    name:"Riya gupta",
+    },
+    _id:"2",
+},];

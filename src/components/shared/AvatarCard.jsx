@@ -1,7 +1,8 @@
 import { Stack,AvatarGroup,Box, Avatar } from '@mui/material'
-import React from 'react'
 
-const AvatarCard = ({avatar= [] ,max=4}) => {
+import PropTypes from 'prop-types';
+
+const AvatarCard = ({ avatar= [] ,max=4}) => {
   return (
     <Stack direction={"row"} spacing={0.5}>
         <AvatarGroup max={max}>
@@ -28,5 +29,10 @@ const AvatarCard = ({avatar= [] ,max=4}) => {
     </Stack>
   )
 }
+AvatarCard.propTypes = {
+  avatar: PropTypes.arrayOf(PropTypes.string),
+  max: PropTypes.number, 
+};
+
 
 export default AvatarCard

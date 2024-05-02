@@ -1,5 +1,5 @@
-import { Stack, avatarClasses  } from '@mui/material';
-import React from 'react';
+import { Stack  } from '@mui/material';
+
 import PropTypes from 'prop-types';
 import ChatItem from '../shared/ChatItem';
 

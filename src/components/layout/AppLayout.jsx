@@ -13,9 +13,9 @@ import Profile from '../specific/Profile';
 
 const AppLayout = (WrappedComponent) => {
     return (props) => {
+        
         const params = useParams(); 
         const chatId = params.chatId;
-
         const handleDeleteChat = (e, _id, Groupchat) => {
             e.preventDefault(); // Corrected preventDefault() casing
             console.log("delete chat", _id, Groupchat);
