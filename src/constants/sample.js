@@ -41,3 +41,13 @@ export const sampleNotification=[{
     },
     _id:"2",
 },];
+
+
+export const sampleMessage=[{
+    attachment:[
+        {
+            public_id:"asdhfkja",
+            url:""
+        }
+    ]
+}];
