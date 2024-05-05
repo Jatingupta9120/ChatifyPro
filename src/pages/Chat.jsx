@@ -2,10 +2,18 @@ import { IconButton, Stack } from '@mui/material';
 import AppLayout from '../components/layout/AppLayout';
 import { greycolor,orange } from '../constants/color';
 import React, { useRef } from "react";
+import MessageComponent from "../components/shared/MessageComponent";
 import { AttachFile as AttachFileIcon, Send as SendIcon } from '@mui/icons-material';
 import Inputbox from '../components/styles/StyledComponents'; // Import Inputbox component
 import FileMenu from '../components/dialogs/FileMenu';
+import { sampleMessage } from '../constants/sample';
 
+
+const user={
+  _id:"lfkshflslfj",
+  name:"John",
+
+}
 
 const Chat = () => {
   const containerRef = useRef(null);
@@ -17,6 +25,12 @@ const Chat = () => {
         overflowX: "hidden",
         overflowY: "auto",
       }}>
+
+        {
+          sampleMessage.map(i=>{
+            <MessageComponent  key={i._id}message={i} user={user}/>
+          })
+        }
        
       </Stack>
       <form style={{ height: "10%" }}>
@@ -45,7 +59,7 @@ const Chat = () => {
           </IconButton>
         </Stack>
       </form>
-      <fileMenu />
+      <FileMenu />
     </>
   );
 };
