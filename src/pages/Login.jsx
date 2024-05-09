@@ -5,6 +5,7 @@ import { VisuallyhiddenInput } from '../components/styles/StyledComponents';
 import { useFileHandler, useInputValidation, useStrongPassword } from '6pp';
 import { usernameValidator } from '../utils/validator';
 import { useParams } from 'react-router-dom'; // Import useParams from react-router-dom
+import { bggradient } from '../constants/color';
 
 const Login = () => {
     const [isLogin, setIsLogin] = useState(true);
@@ -27,8 +28,7 @@ const Login = () => {
         <>
             <div
                 style={{
-                    backgroundImage:
-                        "linear-gradient(rgba(200, 200, 200, 0.5), rgb(255 5 5 / 85%))",
+                    backgroundImage:bggradient,
                 }}
             >
                 <Container component={"main"} maxWidth="xs" sx={{ height: "100vh", display: 'flex', justifyContent: 'center', alignItems: 'center' }} >

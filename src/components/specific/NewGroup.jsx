@@ -8,9 +8,7 @@ const NewGroup = () => {
     setmembers(prev=>prev.map(user=>user._id===id?{...user,isAdded:!user.isAdded}:user));
     setselectedMember((prev)=>prev.includes(id)?prev.filter((currelement)=>currelement!==id):[...prev,id]);
   };
-  const submitHandler=()=>{
-
-  };
+  const submitHandler=()=>{};
   const closeHandler=()=>{};
   const [members,setmembers]=useState(Sampleusers); 
   const [selectMember,setselectedMember]=useState([]);
