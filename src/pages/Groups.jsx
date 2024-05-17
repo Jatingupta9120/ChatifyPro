@@ -135,7 +135,7 @@ const Groups = () => {
           xs: "none",
           sm: "block",
         },
-        backgroundImage:bggradient,
+       
       }} sm={4} >
         <GroupList w={"50vw"} myGroups={samplechat} chatId={chatId} />
       </Grid>
@@ -201,7 +201,8 @@ const Groups = () => {
         display: {
           xs: "block",
           sm: "none",
-        }
+        },
+        
       }} open={ismobilemenuopen} onClose={handleMobileClose}>
         <GroupList w={"50vw"} />
       </Drawer>
@@ -210,7 +211,11 @@ const Groups = () => {
 }
 
 const GroupList = ({ w = "100%", myGroups = [], chatId }) => (
-  <Stack width={w}>
+  <Stack width={w} sx={{
+    backgroundImage:bggradient,
+    height:"100vh",
+    overflow:"auto",
+  }}>
     {myGroups.length > 0 ? (
       myGroups.map((group) => <GroupListItems group={group} chatId={chatId} key={group._id} />)
     ) : (

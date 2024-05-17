@@ -1,6 +1,6 @@
 import React from 'react'
 import { Grid,Skeleton } from '@mui/material';
-const Loaders = () => {
+const LayoutLoaders = () => {
   return (
     <Grid container height={"calc(100vh-4rem)"} spacing={"1rem"}>
     <Grid  item sm ={4} md={3} sx={{
@@ -25,4 +25,4 @@ const Loaders = () => {
   )
 }
 
-export default Loaders
+export default LayoutLoaders
